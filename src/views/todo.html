@@ -1,0 +1,33 @@
+<table>
+  <thead>
+    <h1>To Do List</h1>
+      <tr>
+          <th>Title</th>
+          <th>Description</th>
+          <th>Delete</th>
+          <th>Edit</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr ng-repeat="item in rc.listItems">
+          <td>
+              <span ng-hide="rc.editMode === item.id">{{item.title}}</span>
+              <input ng-show="rc.editMode === item.id" ng-model="rc.currentItem.title">
+          </td>
+          <td>
+              <span ng-hide="rc.editMode === item.id">{{item.description}}</span>
+              <input ng-show="rc.editMode === item.id" ng-model="rc.currentItem.description">
+          </td>
+          <td>
+              <button ng-click="rc.remove(item.id)">Delete</button>
+          </td>
+          <td>
+              <button ng-click="rc.setEdit(item)" ng-show="rc.editMode === null">Edit</button>
+              <button ng-click="rc.saveEdit()" ng-show="rc.editMode === item.id">Save</button>
+          </td>
+      </tr>
+  </tbody>
+</table>
+<input id="title" ng-model="rc.myItem.title">
+<input id="description" ng-model="rc.myItem.description">
+<button class="input" type="button" ng-click="rc.add()">Add</button>

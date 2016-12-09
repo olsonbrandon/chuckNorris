@@ -1,0 +1,24 @@
+{
+  "name": "chucknorris",
+  "description": "to-do-list with a chuck norris punch",
+  "main": "index.js",
+  "authors": [
+    "BrandonO"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/olsonbrandon/chuckNorris",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {},
+  "dependencies": {
+    "angular": "^1.5.9",
+    "angular-ui-router": "^0.3.2"
+  }
+}

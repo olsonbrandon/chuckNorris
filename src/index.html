@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Chuck Norris' To Do List</title>
+  </head>
+  <body ng-app="ChuckNorris">
+    <a ui-sref="toDo" ui-sref-active="active">To Do List</a>
+    <a ui-sref="jokes" ui-sref-active="active">Jokes</a>
+    <ui-view></ui-view>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="app.min.js"></script>
+  </body>
+</html>
